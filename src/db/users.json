@@ -4,20 +4,20 @@
         "user_name": "Elon Reeve Musk",
         "tweets": 777,
         "followers": 100500,
-        "avatar": "url.jpg"
+        "avatar": "https://helenagingembre.github.io/goit-markup-hw-08/images/product-designer.jpg"
     },
     {
         "id": 2,
         "user_name": "Bill Gates",
         "tweets": 1525,
         "followers": 100500,
-        "avatar": "url.jpg"
+        "avatar": "https://helenagingembre.github.io/goit-markup-hw-08/images/frontend-developer.jpg"
     },
     {
         "id": 3,
         "user_name": "Bobby Rayan",
         "tweets": 135,
         "followers": 100500,
-        "avatar": "url.jpg"
+        "avatar": "https://helenagingembre.github.io/goit-markup-hw-08/images/marketing.jpg"
     }
 ]
