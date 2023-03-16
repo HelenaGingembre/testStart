@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const BoxItem = styled.li`
-    outline: #4caf50 solid 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +49,13 @@ export const LoqoIcon = styled.div`
     left: 20px;
     width: 76px;
     height: 22px;
-    fill: rgba(255, 255, 255, 0.3);
+`;
+export const ImgTop = styled.img`
+    position: absolute;
+    top: 28px;
+    left: 36px;
+    width: 308px;
+    height: 168px;
 `;
 
 export const Linear = styled.div`
@@ -62,6 +67,13 @@ export const Linear = styled.div`
         inset 0px -1.71846px 3.43693px #ae7be3,
         inset 0px 3.43693px 2.5777px #fbf8ff;
 `;
+export const Ellipse = styled.img`
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    height: 80px;
+`;
 export const Avatar = styled.div`
     position: absolute;
     top: -36px;
@@ -70,7 +82,6 @@ export const Avatar = styled.div`
     height: 80px;
     padding: 8px;
     border-radius: 50%;
-    background-image: url('../../assets/images/ellipseStroke.png');
 `;
 
 export const ImgUser = styled.img`
@@ -81,7 +92,7 @@ export const ImgUser = styled.img`
 
 export const CardInfo = styled.div`
     width: 100%;
-
+    height: 238px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,7 +105,31 @@ export const TweetsStats = styled.p`
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
+    text-transform: uppercase;
     font-size: 20px;
     line-height: 1.2;
     color: #ebd8ff;
+`;
+export const TweetsBtn = styled.button`
+    margin-top: 10px;
+    width: 196px;
+    height: 50px;
+
+    background-color: #ebd8ff;
+    box-shadow: 0px 3.43693px 3.43693px rgb(0 0 0 / 25%);
+    border-radius: 10.3108px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 28px;
+    gap: 6px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.22%;
+    text-transform: uppercase;
 `;

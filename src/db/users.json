@@ -19,5 +19,19 @@
         "tweets": 135,
         "followers": 100500,
         "avatar": "https://helenagingembre.github.io/goit-markup-hw-08/images/marketing.jpg"
+    },
+    {
+        "id": 4,
+        "user_name": "Bill Gates",
+        "tweets": 1525,
+        "followers": 100500,
+        "avatar": "https://helenagingembre.github.io/goit-markup-hw-08/images/frontend-developer.jpg"
+    },
+    {
+        "id": 5,
+        "user_name": "Bobby Rayan",
+        "tweets": 135,
+        "followers": 100500,
+        "avatar": "https://helenagingembre.github.io/goit-markup-hw-08/images/marketing.jpg"
     }
 ]

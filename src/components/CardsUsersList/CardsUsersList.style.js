@@ -5,5 +5,4 @@ export const ListGrid = styled.ul`
     flex-wrap: wrap;
     margin-bottom: -30px;
     justify-content: center;
-    outline: red solid 2px;
 `;
