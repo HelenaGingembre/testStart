@@ -1,21 +1,21 @@
 [
     {
         "id": 1,
-        "user": "Elon Reeve Musk",
+        "user_name": "Elon Reeve Musk",
         "tweets": 777,
         "followers": 100500,
         "avatar": "url.jpg"
     },
     {
         "id": 2,
-        "user": "Bill Gates",
+        "user_name": "Bill Gates",
         "tweets": 1525,
         "followers": 100500,
         "avatar": "url.jpg"
     },
     {
         "id": 3,
-        "user": "Bobby Rayan",
+        "user_name": "Bobby Rayan",
         "tweets": 135,
         "followers": 100500,
         "avatar": "url.jpg"

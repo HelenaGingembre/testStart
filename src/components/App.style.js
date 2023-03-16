@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
     position: relative;
-    max-width: 1160px;
+    max-width: 1280px;
     min-height: calc(100vh - 164px);
     margin: 0 auto;
     padding: 40px 20px;

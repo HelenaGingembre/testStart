@@ -1,11 +1,12 @@
 import { CardUser } from '../UserCard/UserCard';
+import { ListGrid } from './CardsUsersList.style';
 
 export const CardsUsersList = ({ users }) => {
     return (
-        <ul>
+        <ListGrid>
             {users.map(user => (
                 <CardUser key={user.id} user={user} />
             ))}
-        </ul>
+        </ListGrid>
     );
 };
