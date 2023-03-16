@@ -22,9 +22,6 @@ import ellipse from '../../assets/images/ellipseStroke.png';
 export const CardUser = ({ user }) => {
     const { id, user_name, tweets, followers, avatar } = user;
 
-    const follow = `isFollowers${id}`;
-    const activeBtn = `disabled${id}`;
-
     const useLocalStorage = initialState => {
         const [state, setState] = useState(initialState);
         const storage = () => {
@@ -33,6 +30,8 @@ export const CardUser = ({ user }) => {
         return [state, storage];
     };
 
+    const follow = `isFollowers${id}`;
+    const activeBtn = `disabled${id}`;
     const [isFollowers, setIsFollowers] = useState(() => {
         return JSON.parse(window.localStorage.getItem(follow)) ?? followers;
     });
@@ -58,7 +57,7 @@ export const CardUser = ({ user }) => {
 
     // console.log('user____>', user);
     return (
-        <BoxItem key={id}>
+        <BoxItem>
             <BoxCard>
                 <CardTop>
                     <LoqoIcon>
@@ -76,7 +75,7 @@ export const CardUser = ({ user }) => {
                 <CardInfo>
                     <TweetsStats> {tweets} Tweets</TweetsStats>
                     <TweetsStats>
-                        {followers} {isFollowers} Followers
+                        {isFollowers.toLocaleString('en-US')} Followers
                     </TweetsStats>
                     {disabled ? (
                         <TweetsBtn
