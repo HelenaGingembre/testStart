@@ -55,7 +55,6 @@ export const CardUser = ({ user }) => {
         }
     };
 
-    // console.log('user____>', user);
     return (
         <BoxItem>
             <BoxCard>
