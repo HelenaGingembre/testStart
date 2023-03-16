@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
     Avatar,
     BoxCard,
@@ -11,6 +12,7 @@ import {
     ImgTop,
     Ellipse,
     TweetsBtn,
+    TweetsBtnActive,
 } from './UserCard.style';
 
 import logo from '../../assets/images/Logo.png';
@@ -20,7 +22,41 @@ import ellipse from '../../assets/images/ellipseStroke.png';
 export const CardUser = ({ user }) => {
     const { id, user_name, tweets, followers, avatar } = user;
 
-    console.log('user____>', user);
+    const follow = `isFollowers${id}`;
+    const activeBtn = `disabled${id}`;
+
+    const useLocalStorage = initialState => {
+        const [state, setState] = useState(initialState);
+        const storage = () => {
+            setState(!state);
+        };
+        return [state, storage];
+    };
+
+    const [isFollowers, setIsFollowers] = useState(() => {
+        return JSON.parse(window.localStorage.getItem(follow)) ?? followers;
+    });
+
+    const [disabled, setDisabledStorage] = useLocalStorage(() => {
+        return JSON.parse(window.localStorage.getItem(activeBtn)) ?? true;
+    });
+
+    useEffect(() => {
+        window.localStorage.setItem(follow, JSON.stringify(isFollowers));
+        window.localStorage.setItem(activeBtn, JSON.stringify(disabled));
+    }, [isFollowers, follow, disabled, activeBtn]);
+
+    const clickBtn = () => {
+        if (disabled) {
+            setDisabledStorage(!disabled);
+            setIsFollowers(prevState => prevState + 1);
+        } else {
+            setDisabledStorage(!disabled);
+            setIsFollowers(prevState => prevState - 1);
+        }
+    };
+
+    // console.log('user____>', user);
     return (
         <BoxItem key={id}>
             <BoxCard>
@@ -39,8 +75,24 @@ export const CardUser = ({ user }) => {
                 </Linear>
                 <CardInfo>
                     <TweetsStats> {tweets} Tweets</TweetsStats>
-                    <TweetsStats> {followers} Followers</TweetsStats>
-                    <TweetsBtn>Following</TweetsBtn>
+                    <TweetsStats>
+                        {followers} {isFollowers} Followers
+                    </TweetsStats>
+                    {disabled ? (
+                        <TweetsBtn
+                            type="button"
+                            onClick={() => clickBtn({ isFollowers })}
+                        >
+                            Follow
+                        </TweetsBtn>
+                    ) : (
+                        <TweetsBtnActive
+                            type="button"
+                            onClick={() => clickBtn({ isFollowers })}
+                        >
+                            Following
+                        </TweetsBtnActive>
+                    )}
                 </CardInfo>
             </BoxCard>
         </BoxItem>

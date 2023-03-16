@@ -116,7 +116,7 @@ export const TweetsBtn = styled.button`
     height: 50px;
 
     background-color: #ebd8ff;
-    box-shadow: 0px 3.43693px 3.43693px rgb(0 0 0 / 25%);
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
     border-radius: 10.3108px;
 
     display: flex;
@@ -132,4 +132,8 @@ export const TweetsBtn = styled.button`
     font-size: 18px;
     line-height: 1.22%;
     text-transform: uppercase;
+`;
+export const TweetsBtnActive = styled(TweetsBtn)`
+    background-color: #5cd3a8;
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
 `;
