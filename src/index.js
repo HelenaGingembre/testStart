@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 const root = createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <BrowserRouter basename="/testStart">
+        <BrowserRouter basename="/">
             <App />
         </BrowserRouter>
     </React.StrictMode>
