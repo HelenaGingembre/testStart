@@ -41,7 +41,6 @@ export const CardTop = styled.div`
     position: relative;
     width: 100%;
     height: 214px;
-    background-image: url('../../assets/images/picture2_1.png');
 `;
 export const LoqoIcon = styled.div`
     position: absolute;
